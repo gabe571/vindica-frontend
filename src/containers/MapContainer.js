@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker} from 'google-maps-react';
+import mapStyles from './mapStyles';
+
 export class MapContainer extends Component {
+
   render() {
+
+    const mapStyles = {
+      width: "60%",
+      height: "75%",
+      margin: "250px"
+    };
+
     return (
-      <Map google={this.props.google} zoom={14}
+    
+      
+      <Map google={this.props.google} 
+      zoom={14}
+      style={mapStyles}
       initialCenter={
-        // at some point well need a if else statement to determine if the user is in SF or SEA
         {
           lat: 47.606209,
           lng: -122.332069
