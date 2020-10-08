@@ -18,7 +18,7 @@ handleNameChange = (event) => {
 }
     render() {
         return (
-           <div class="form-container">
+           <div className="form-container">
            <form className="form" onSubmit={this.handleForm}>
                <div>
                    <h3 className=
