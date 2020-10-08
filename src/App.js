@@ -3,6 +3,7 @@ import './App.css';
 import MapContainer from './containers/MapContainer'
 import Form from './components/Form'
 import Login from './components/Login'
+import Home from './components/Home'
 import {Route, Switch, Link, NavLink, withRouter} from 'react-router-dom'
 
 
@@ -92,7 +93,8 @@ class App extends Component {
     return (
       <div className="App">
       <header>
-        <h3>Art Appreciators Incorporated</h3>
+        <h1>VINDICA</h1>
+        <h3>The coffee shop locator for Seattle!</h3>
        <ul>
          <li>
            <NavLink to='/' exact>Home</NavLink>
@@ -107,6 +109,7 @@ class App extends Component {
       </header>
       
   <Switch>
+  <Route exact path='/' component={Home}/>
   <Route path='/login' render={this.renderLoginPage}/>
   <Route path='/signup' render={this.renderSignUpPage}/>
 </Switch>
