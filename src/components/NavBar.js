@@ -23,6 +23,9 @@ class NavBar extends Component {
          <li>
            <NavLink to='/MapContainer'>MAP!</NavLink>
          </li>
+         <li>
+           <NavLink to='/Form'>Review Form</NavLink>
+         </li>
        </ul>
        
             </div>

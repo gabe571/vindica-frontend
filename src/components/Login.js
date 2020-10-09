@@ -30,10 +30,10 @@ class Login extends React.Component{
       handleAuthResponse = (res) => {
         if(res.user){
           localStorage.token = res.token
-          this.setState({user:{id:res.user.id, username:res.user.username, token:res.token} 
-        //     allArt:res.user.arts}, () => {
-        //   this.props.history.push('/paintings')
-        })
+          this.setState({user:{id:res.user.id, username:res.user.username, token:res.token}, 
+        //     allMap:res.user.Maps}, () => {
+        //   this.props.history.push('/MapContainer')
+          })
       } else {
           alert(res.error)
         }

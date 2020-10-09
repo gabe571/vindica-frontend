@@ -14,6 +14,7 @@ export class MapContainer extends React.Component {
 
 render() {
   return (
+    
     <div className="map">
     <Map 
       google={this.props.google}
@@ -26,13 +27,11 @@ render() {
       }
     >
     <InfoWindow>
-      
-      <div>
-      </div>
     </InfoWindow>
   </Map>
   </div>
   );
+  
 }
 }
  
