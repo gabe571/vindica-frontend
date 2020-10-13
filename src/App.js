@@ -7,6 +7,7 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
+import Cafe from './components/Cafe'
 import {Route, Switch, Link, NavLink, withRouter} from 'react-router-dom'
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
 <NavBar />    
   <Switch>
   <Route exact path='/' component={LandingPage}/>
+  <Route path="/cafe" component={Cafe}/>
   <Route path="/login" component={Login}/>
   <Route path='/SignUp' component={SignUp}/>
   <Route path='/Home' component={Home}/>

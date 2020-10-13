@@ -23,6 +23,9 @@ class NavBar extends Component {
          <li>
            <NavLink to='/SignUp'>Sign Up here!</NavLink>
          </li>
+         <li>
+           <NavLink to='/cafe'>Cafes!</NavLink>
+         </li>
        </ul>
        
             </div>
