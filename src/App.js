@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import LandingPage from './components/LandingPage'
 import MapContainer from './containers/MapContainer'
 import Form from './components/Form'
 import Login from './components/Login'
@@ -15,9 +16,10 @@ class App extends Component {
       <div className="App">
 <NavBar />    
   <Switch>
-  <Route exact path='/' component={Home}/>
+  <Route exact path='/' component={LandingPage}/>
   <Route path="/login" component={Login}/>
   <Route path='/SignUp' component={SignUp}/>
+  <Route path='/Home' component={Home}/>
   <Route path="/MapContainer" component={MapContainer}/>
   <Route path='/Form' component={Form}/>
 </Switch>

@@ -16,6 +16,8 @@ render() {
   return (
     
     <div className="map">
+          <button onclick="getLocation()">GET YOUR LOCATION</button>
+
     <Map 
       google={this.props.google}
       zoom={15}

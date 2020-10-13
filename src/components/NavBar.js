@@ -12,19 +12,16 @@ class NavBar extends Component {
             <div className="navbar">
     <ul>
          <li>
-           <NavLink to='/' exact>Home</NavLink>
+           <NavLink to='/' exact>VINDICA</NavLink>
+         </li>
+         <li>
+           <NavLink to='/home'>Home</NavLink>
          </li>
          <li>
            <NavLink to='/login'>Login</NavLink>
          </li>
          <li>
            <NavLink to='/SignUp'>Sign Up here!</NavLink>
-         </li>
-         <li>
-           <NavLink to='/MapContainer'>MAP!</NavLink>
-         </li>
-         <li>
-           <NavLink to='/Form'>Review Form</NavLink>
          </li>
        </ul>
        

@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react'
+import MapContainer  from '../containers/MapContainer'
+import Form from './Form'
 
-const Home = () => {
-  return (
-    <div className="home">
-     <h1>testing!</h1>
-    </div>
-  );
+class Home extends React.Component {
+
+
+    render() {
+        return (
+               <div>
+                   <MapContainer />
+                   <Form />
+           </div>
+        )
+}
 }
 
-export default Home;
+export default Home
