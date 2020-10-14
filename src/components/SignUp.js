@@ -69,7 +69,7 @@ handleSignUpChange = (e) => {
 render(){
   return (
     <div className="Login">
-     <form onSubmit={(e) => this.props.handleSignUp(e, this.state)}>
+     <form onSubmit={(e) => this.handleSignUp(e, this.state)}>
          <label>UserName</label>
          <input type="text" name="username" value={this.state.username} onChange={this.handleSignUpChange}/>
         <br/>

@@ -45,24 +45,6 @@ class Login extends React.Component{
        .catch(err => console.log(err))
       }
      
-      handleSignup = (e,userInfo) => {
-       e.preventDefault()
-        fetch('http://localhost:3000/users',{
-          method:"POST",
-          headers:{
-            'Content-Type':'application/json'
-          },
-          body:JSON.stringify(userInfo)
-        })
-        .then(res => res.json())
-        .then(json => {
-         if(!json.error){
-           this.handleAuthResponse(json)
-         }else {
-           alert(json.error)
-         }
-        })
-      }
       
 handleChange = (e) => {
   let {name, value} = e.target

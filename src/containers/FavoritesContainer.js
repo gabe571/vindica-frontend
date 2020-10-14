@@ -4,7 +4,9 @@ class FavoritesContainer extends React.Component{
 
     render(){
         return (
+            <div>
             <div>FAVORITES GO HERE!</div>
+            </div>
         )
     }
 }
