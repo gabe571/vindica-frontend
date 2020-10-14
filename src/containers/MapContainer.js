@@ -7,8 +7,13 @@ export class MapContainer extends React.Component {
     pins:[],
     showingInfoWindow: false,
     activeMarker: {},
-    selectedPlace: {},
+    selectedPlace: "",
+    display_address:"",
+    display_phone:"",
+    url:"",
+    rating:"",
   };
+
 
   componentDidMount() {
     fetch("http://localhost:3000/search")
@@ -18,31 +23,34 @@ export class MapContainer extends React.Component {
  
   onMarkerClick = (props, marker, e) =>
     this.setState({
-      selectedPlace: props,
+      display_phone: props.display_phone,
+      display_address: props.display_address,
+      selectedPlace: props.name,
+      url: props.url,
+      rating: props.rating,
       activeMarker: marker,
       showingInfoWindow: true
     });
- 
-  onMapClicked = (props) => {
+
+  makePins = () => {
+    return this.state.pins.map(pin => {
+      return (<Marker onClick={this.onMarkerClick}
+         key={pin.id} pin={pin} 
+        position={{ lat: pin.coordinates.latitude, lng: pin.coordinates.longitude }} name={pin.name} display_phone={pin.display_phone} display_address={pin.location.display_address} url={pin.url} rating={pin.rating}
+      />)
+    })
+  }
+  onClose = props => {
     if (this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
         activeMarker: null
-      })
+      });
     }
   };
-  
-  makePins = () => {
-    console.log(this.state.pins)
-    return this.state.pins.map(pin => {
-      return (<Marker 
-        name={pin.name} key={pin.id} pin={pin}
-        position={{ lat: pin.coordinates.latitude, lng: pin.coordinates.longitude }}
-      />)
-    })
-  }
  
   render() {
+    console.log(this.state.pins)
     return (
       <Map
       initialCenter={
@@ -51,15 +59,27 @@ export class MapContainer extends React.Component {
           lng: -122.332069
         }} 
       google={this.props.google}
+      style={{width: 500, height: 500, }}
           onClick={this.onMapClicked}>
             {this.makePins()}
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}>
+        <InfoWindow 
+        display_address0={this.state.display_address}
+        display_phone={this.state.display_phone}
+         selectedPlace={this.state.selectedPlace}
+         url={this.state.url}
+         rating={this.state.rating}
+         marker={this.state.activeMarker}
+         visible={this.state.showingInfoWindow}
+         onClose={this.onClose}>
             <div>
-              <h1>{this.state.selectedPlace.name}</h1>
+              <h5>{this.state.selectedPlace}</h5>
+              <h5>{this.state.display_address}</h5>
+              <h5>Phone #:{this.state.display_phone}</h5>
+              <h5>{this.state.url}</h5>
+              <h5>{this.state.rating} Stars</h5>
             </div>
         </InfoWindow>
+        
       </Map>
     )
   }

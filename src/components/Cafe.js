@@ -1,30 +1,31 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Form from './Form'
 class Cafe extends React.Component {
  
     state = {
         cafes: [],
         name:"",
         img_url:"",
-        buisnesses:"",
+        businesses:"",
+        name:"",
  
     } 
 
     componentDidMount() {
         fetch("http://localhost:3000/search")
         .then(resp => resp.json())
-        .then(cafes => this.setState({ cafes: cafes.businesses }))
+        .then(cafes => this.setState({ cafes: cafes }))
       }
      
 
-render() {
-    // console.log(this.setState)
-    return (
-        <div>
-            <ul>
-        <div className="card_title">CAFES:{this.state.cafes.businesses}</div>
-        </ul>
-        </div>
-    )
-}
-}
+      render() {
+        return (
+            <div>
+                <li>Cafes:{this.state.businesses.name}</li>
+                <Form />
+                </div>
+
+        )
+      }
+    }
 export default Cafe;

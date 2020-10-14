@@ -8,7 +8,7 @@ class Login extends React.Component{
           password:"",
           token:""
         },
-        allArt:[]
+        allCafes:[]
       }
     
       componentDidMount(){
@@ -30,9 +30,9 @@ class Login extends React.Component{
       handleAuthResponse = (res) => {
         if(res.user){
           localStorage.token = res.token
-          this.setState({user:{id:res.user.id, username:res.user.username, token:res.token}, 
-        //     allMap:res.user.Maps}, () => {
-        //   this.props.history.push('/MapContainer')
+          this.setState({user:{id:res.user.id, username:res.user.username, token:res.token},
+            allCafe:res.user.cafes}, () => {
+          this.props.history.push('/Cafes')
           })
       } else {
           alert(res.error)
@@ -61,25 +61,6 @@ class Login extends React.Component{
        .catch(err => console.log(err))
       }
      
-    //   handleSignup = (e,userInfo) => {
-    //    e.preventDefault()
-    //     fetch('http://localhost:3000/users',{
-    //       method:"POST",
-    //       headers:{
-    //         'Content-Type':'application/json'
-    //       },
-    //       body:JSON.stringify(userInfo)
-    //     })
-    //     .then(res => res.json())
-    //     .then(json => {
-    //      if(!json.error){
-    //        this.handleAuthResponse(json)
-    //      }else {
-    //        alert(json.error)
-    //      }
-    //     })
-    //   }
-    
 handleChange = (e) => {
   let {name, value} = e.target
   this.setState({
@@ -87,14 +68,13 @@ handleChange = (e) => {
   })
 }
 
-renderLoginPage = () => <Login handleLoginOrSignup={this.handleLogin}/>
-      renderSignUpPage = () => <Login handleLoginOrSignup={this.handleSignup}/>
+renderLoginPage = () => <Login handleLogin={this.handleLogin}/>
 
 render(){
   return (
     <div className="Login">
         <h1>LOGIN IN HERE!</h1>
-     <form onSubmit={(e) => this.props.handleLoginOrSignup(e, this.state)}>
+     <form onSubmit={(e) => this.props.handleLogin(e, this.state)}>
          <label>UserName</label>
          <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
         <br/>
