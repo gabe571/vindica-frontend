@@ -1,46 +1,30 @@
 import React from 'react';
 
 class Login extends React.Component{
+
     state={
-        user:{
-          id:0,
-          username:"",
-          password:"",
-          token:""
-        },
-        allCafes:[]
-      }
-    
-      componentDidMount(){
-       if(localStorage.token) {
-         fetch('http://localhost:3000/persist',{
-           headers:{
-             "Authorization": `Bearer ${localStorage.token}`
-           }
+      user:{
+        id:0,
+        username:"",
+        token:""
+      },
+      home:[]
+    }
+     
+       handleAuthResponse = (res) => {
+         if(res.user){
+           localStorage.token = res.token
+           this.setState({user:{id:res.user.id, username:res.user.username, token:res.token}, home:res.user.home}, () => {
+           this.props.history.push('/home')
          })
-         .then(res => res.json())
-         .then(json =>{
-           console.log(json)
-            this.handleAuthResponse(json)
-         })
-         
+       } else {
+           alert(res.error)
+         }
        }
-      }
-    
-      handleAuthResponse = (res) => {
-        if(res.user){
-          localStorage.token = res.token
-          this.setState({user:{id:res.user.id, username:res.user.username, token:res.token},
-            allCafe:res.user.cafes}, () => {
-          this.props.history.push('/Cafes')
-          })
-      } else {
-          alert(res.error)
-        }
-      }
-    
-      handleLogin = (e, userInfo) =>{
+
+       handleLogin = (e, userInfo) =>{
         e.preventDefault()
+        console.log(e)
      
         fetch('http://localhost:3000/login',{
          method:"POST",
@@ -61,6 +45,25 @@ class Login extends React.Component{
        .catch(err => console.log(err))
       }
      
+      handleSignup = (e,userInfo) => {
+       e.preventDefault()
+        fetch('http://localhost:3000/users',{
+          method:"POST",
+          headers:{
+            'Content-Type':'application/json'
+          },
+          body:JSON.stringify(userInfo)
+        })
+        .then(res => res.json())
+        .then(json => {
+         if(!json.error){
+           this.handleAuthResponse(json)
+         }else {
+           alert(json.error)
+         }
+        })
+      }
+      
 handleChange = (e) => {
   let {name, value} = e.target
   this.setState({
@@ -68,13 +71,10 @@ handleChange = (e) => {
   })
 }
 
-renderLoginPage = () => <Login handleLogin={this.handleLogin}/>
-
 render(){
   return (
     <div className="Login">
-        <h1>LOGIN IN HERE!</h1>
-     <form onSubmit={(e) => this.props.handleLogin(e, this.state)}>
+     <form onSubmit={(e) => this.handleLogin(e, this.state)}>
          <label>UserName</label>
          <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
         <br/>

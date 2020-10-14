@@ -1,6 +1,4 @@
-import React, { Component } from 'react'
-import Login from './Login'
-import SignUp from './SignUp'
+import React from 'react'
 import vindica from './vindica.png'
 
 class LandingPage extends React.Component {
@@ -9,9 +7,7 @@ class LandingPage extends React.Component {
     render() {
         return (
                <div className="landingpage">
-                   <Login />
-                    <SignUp />
-                   <img src={vindica} className="vindica"></img>
+                   <img src={vindica} className="vindica" alt="background"></img>
            </div>
         )
 }

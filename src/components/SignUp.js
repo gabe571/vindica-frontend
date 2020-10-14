@@ -1,45 +1,46 @@
 import React from 'react';
 
 class SignUp extends React.Component{
+
     state={
-        user:{
-          id:0,
-          username:"",
-          password:"",
-          token:""
-        },
-        allArt:[]
-      }
-    
-      componentDidMount(){
-       if(localStorage.token) {
-         fetch('http://localhost:3000/persist',{
-           headers:{
-             "Authorization": `Bearer ${localStorage.token}`
-           }
+      user:{
+        id:0,
+        username:"",
+        token:""
+      },
+   
+    }
+
+    // componentDidMount(){
+    //     if(localStorage.token) {
+    //       fetch('http://localhost:3000/persist',{
+    //         headers:{
+    //           "Authorization": `Bearer ${localStorage.token}`
+    //         }
+    //       })
+    //       .then(res => res.json())
+    //       .then(json =>{
+    //         console.log(json)
+    //          this.handleAuthResponse(json)
+    //       })
+          
+    //     }
+    // }
+     
+       handleAuthResponse = (res) => {
+         if(res.user){
+           localStorage.token = res.token
+           this.setState({user:{id:res.user.id, username:res.user.username, token:res.token}, home:res.user.home}, () => {
+           this.props.history.push('/signup')
          })
-         .then(res => res.json())
-         .then(json =>{
-           console.log(json)
-            this.handleAuthResponse(json)
-         })
-         
+       } else {
+           alert(res.error)
+         }
        }
-      }
-    
-      handleAuthResponse = (res) => {
-        if(res.user){
-          localStorage.token = res.token
-          this.setState({user:{id:res.user.id, username:res.user.username, token:res.token}, 
-        //     allFav:res.user.favorites}, () => {
-        //   this.props.history.push('/favorites')
-        })
-      } else {
-          alert(res.error)
-        }
-      }
-    
+
+
       handleSignUp = (e,userInfo) => {
+          console.log(e)
        e.preventDefault()
         fetch('http://localhost:3000/users',{
           method:"POST",
@@ -57,26 +58,23 @@ class SignUp extends React.Component{
          }
         })
       }
-    
-handleChange = (e) => {
+      
+handleSignUpChange = (e) => {
   let {name, value} = e.target
   this.setState({
     [name]: value
   })
 }
 
-renderSignUpPage = () =>  <SignUp handleSignUp={this.handleSignUp}/>
-
 render(){
   return (
     <div className="Login">
-        <h1>SIGN UP HERE!</h1>
      <form onSubmit={(e) => this.props.handleSignUp(e, this.state)}>
          <label>UserName</label>
-         <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+         <input type="text" name="username" value={this.state.username} onChange={this.handleSignUpChange}/>
         <br/>
          <label>Password</label>
-         <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
+         <input type="password" name="password" value={this.state.password} onChange={this.handleSignUpChange}/>
          <br/>
          <input type="submit" value="Submit" />
       </form>
