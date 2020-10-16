@@ -7,6 +7,7 @@ class Cafes extends React.Component {
         name:"",
         img_url:"",
         businesses:"",
+        phone:"",
     } 
 
     componentDidMount() {
@@ -18,11 +19,11 @@ class Cafes extends React.Component {
 
       render() {
         console.log(this.state.cafes)
-        console.log(this.setState)
         return (
             <div>
-                <li>Cafes:{this.state.businesses}</li>
+                <ul className="cafes"> Cafes:{this.state.name}</ul>
                 </div>
+             
 
         )
       }

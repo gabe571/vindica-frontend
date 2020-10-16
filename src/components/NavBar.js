@@ -26,6 +26,9 @@ class NavBar extends Component {
          <li>
            <NavLink to='/cafes'>Cafes!</NavLink>
          </li>
+         <li>
+           <NavLink to='/Reviews'>Reviews!</NavLink>
+         </li>
        </ul>
        
             </div>

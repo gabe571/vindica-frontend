@@ -6,7 +6,7 @@ const ReviewsContainer = (props) => {
     return (
       <ul className="reviewcards">
         {
-          props.reviews.map(review => <Reviews key={reviews.id} review={review} delete={props.delete} edit={props.edit}/>)
+          props.reviews.map(review => <Reviews key={review.id} review={review} delete={props.delete} edit={props.edit}/>)
         }  
       </ul>
     )

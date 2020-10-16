@@ -24,6 +24,12 @@ ul {
 .cards__item {
 color: teal;
 background-color:white;
+text-align: left;
+}
+
+.cafes {
+  color: teal;
+  background: white
 }
 li {
   float: left;

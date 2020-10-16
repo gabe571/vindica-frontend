@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Linkify from 'react-linkify';
-import mapStyles from "./mapStyles";
 
 export class MapContainer extends React.Component {
 
@@ -54,6 +53,10 @@ export class MapContainer extends React.Component {
   };
 
     render() {
+      const mapStyles = {
+        width: "50%",
+        height: "50%",
+      };
     console.log(this.state.pins)
     return (
       <Map className="map-position"
@@ -62,6 +65,7 @@ export class MapContainer extends React.Component {
           lat: 47.606209,
           lng: -122.332069
         }} 
+        style={mapStyles}
       google={this.props.google}
           onClick={this.onMapClicked}>
             {this.makePins()}

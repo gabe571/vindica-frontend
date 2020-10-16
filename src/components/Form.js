@@ -1,36 +1,59 @@
 import React, { Component } from 'react'
 
 class Form extends React.Component {
-state = {
-    content:"",
-}
+ 
+    state = {
+     name: '',
+     content:'',
+     rating:'',
+    } 
 
-handleForm = (e) => {
-    e.preventDefault()
-    console.log(e)
-    const Content = this.state.content
-    this.props.reviews(Content)
-}
-
-handleFormChange = (event) => {
+handleName = (event) => {
     this.setState ({
-        content: event.target.value
+        name: event.target.value
     })
 }
-    render() {
-        return (
-           <div className="form-container">
-           <form className="form" onSubmit={this.handleForm}>
-               <div>
-                   <h3 className=
-                   "h3">REVIEW HERE!</h3>
-                   <input  type="textarea"  value={this.state.content} onChange={this.handleFormChange}/>
-               </div>
-               <button type="submit">Create!</button>
-           </form>
-           </div>
-        )
-    }
+    
+handleReviewContent = (event) => {
+    this.setState ({
+        content: event.target.value
+     })
 }
 
-export default Form
+handleRating = (event) => {
+    this.setState ({
+        rating: event.target.value
+     })
+}
+
+handleAddReview = (e) => {
+    e.preventDefault()
+    const name = this.state.name
+    const content = this.state.content
+    const rating = this.state.rating
+   this.props.coffee_shop(name, content, rating)
+}
+render() {
+    return (
+    <div>
+            <form onSubmit={this.handleAddReview}>
+                <div>
+                    <div>
+                    <label>CoffeeShop</label>
+                    <input value={this.state.name} onChange={this.handleName} />
+                    </div>
+                    <label>Review</label>
+                    <textarea value={this.state.content} onChange={this.handleReviewContent} />
+                    <div>
+                    <label>Rating</label>
+                    <input value={this.state.rating} onChange={this.handleRating} />
+                    </div>
+                </div>
+                <button type="submit">Create Review!</button>
+            </form >
+        
+    </div>
+)
+}
+}
+export default Form;
