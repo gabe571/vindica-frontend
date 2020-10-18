@@ -1,14 +1,30 @@
 import React from 'react';
-import Reviews from './Reviews'
+import Review from './Review'
 
-const ReviewsContainer = (props) => {
+class ReviewsContainer extends React.Component {
 
+  state = {
+    reviews: [],
+}
+
+componentDidMount(){
+fetch('http://localhost:3000/reviews')
+.then(res => res.json())
+.then(reviews => this.setState({ reviews }))
+}
+render() {
+  console.log(this.state.reviews)
     return (
+      <div className="review-title"> What are memebers are saying!
       <ul className="reviewcards">
         {
-          props.reviews.map(review => <Reviews key={review.id} review={review} delete={props.delete} edit={props.edit}/>)
+          this.state.reviews.map(review => <Review key={review.id} review={review}  />)
         }  
       </ul>
+     
+     </div>
     )
-  };
+  }
+}
+;
   export default ReviewsContainer;

@@ -4,7 +4,7 @@ class Form extends React.Component {
  
     state = {
      name: '',
-     content:'',
+     reviewed_coffee:'',
      rating:'',
     } 
 
@@ -28,10 +28,10 @@ handleRating = (event) => {
 
 handleAddReview = (e) => {
     e.preventDefault()
-    const name = this.state.name
-    const content = this.state.content
-    const rating = this.state.rating
-   this.props.coffee_shop(name, content, rating)
+    const reviewed_coffee = this.state.reveiewed_coffee
+    // const content = this.state.content
+    // const rating = this.state.rating
+   this.props.review.reveiewed_coffee(reviewed_coffee)
 }
 render() {
     return (

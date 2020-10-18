@@ -87,3 +87,9 @@ width: 100px;
     top: 15px !important;
     width: 150px !important; 
 }
+
+.review-card{
+  border-style: groove;
+  color: black;
+  background-color: white;
+}
