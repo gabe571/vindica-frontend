@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 
+
 class Form extends React.Component {
  
     state = {
-     name: '',
-     reviewed_coffee:'',
-     rating:'',
-    } 
-
+        coffee_shop_name: ''
+    }
 handleName = (event) => {
     this.setState ({
-        name: event.target.value
+        coffee_shop_name: event.target.value
     })
 }
     
@@ -28,10 +26,9 @@ handleRating = (event) => {
 
 handleAddReview = (e) => {
     e.preventDefault()
-    const reviewed_coffee = this.state.reveiewed_coffee
-    // const content = this.state.content
-    // const rating = this.state.rating
-   this.props.review.reveiewed_coffee(reviewed_coffee)
+    console.log(e)
+    const coffee_shop_name = this.state.coffee_shop_name
+   this.props.reviews(coffee_shop_name)
 }
 render() {
     return (
@@ -40,13 +37,13 @@ render() {
                 <div>
                     <div>
                     <label>CoffeeShop</label>
-                    <input value={this.state.name} onChange={this.handleName} />
-                    </div>
+                    <input value={this.state.coffee_shop_name} onChange={this.handleName} />
+                    {/* </div>
                     <label>Review</label>
                     <textarea value={this.state.content} onChange={this.handleReviewContent} />
                     <div>
                     <label>Rating</label>
-                    <input value={this.state.rating} onChange={this.handleRating} />
+                    <input value={this.state.rating} onChange={this.handleRating} /> */}
                     </div>
                 </div>
                 <button type="submit">Create Review!</button>

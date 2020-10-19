@@ -57,7 +57,7 @@ export class MapContainer extends React.Component {
         width: "50%",
         height: "50%",
       };
-    console.log(this.state.pins)
+    // console.log(this.state.pins)
     return (
       <Map className="map-position"
       initialCenter={

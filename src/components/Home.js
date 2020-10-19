@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import MapContainer  from '../containers/MapContainer'
-import FavoritesContainer  from '../containers/FavoritesContainer'
+import FavoritesContainer  from './FavoritesContainer'
 import ReviewsContainer  from './ReviewsContainer'
 import Form from './Form'
 

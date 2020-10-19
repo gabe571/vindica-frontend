@@ -5,6 +5,7 @@ class ReviewsContainer extends React.Component {
 
   state = {
     reviews: [],
+
 }
 
 componentDidMount(){
@@ -13,7 +14,7 @@ fetch('http://localhost:3000/reviews')
 .then(reviews => this.setState({ reviews }))
 }
 render() {
-  console.log(this.state.reviews)
+  // console.log(this.state.reviews)
     return (
       <div className="review-title"> What are memebers are saying!
       <ul className="reviewcards">

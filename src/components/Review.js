@@ -1,9 +1,8 @@
 import React from 'react'
-// import ReviewsContainer from 'ReviewsContainer'
+
 
 
 class Review extends React.Component {
-
 
 handleNameEdit = (event) => {
     this.setState ({
@@ -28,18 +27,20 @@ handleShowForm = () => {
 }
 
 addReview = () => {
-    return {id: this.state.id, coffee_shop_id: this.state.coffee_shop_id, user_id: this.state.user_id, reviewed_coffee: this.state.reviewed_coffee, rating: this.state.rating }
+    return {coffee_shop_name: this.state.coffee_shop_name }
 }
 
 render() {
-    console.log(this.props)
+    console.log(this.props.review)
     return (
-        <div className="review-card">
-    <div className="Review">Coffee Shop: {this.props.review.coffee_shop_id}</div>
+    <div className="review-card">
+    <div className="Review">Coffee Shop: {this.props.review.coffee_shop_name}</div>
     <div className="Review">Review: {this.props.review.reviewed_coffee}</div>
-    <div className="Review">User: {this.props.review.user_id}</div><div className="Review">Stars: {this.props.review.rating}</div>
+    <div className="Review">User: {this.props.review.user_username}</div><div className="Review">Stars: {this.props.review.rating}</div>
+
     </div>
         )
     }
 }
+
 export default Review;

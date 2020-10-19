@@ -2,28 +2,23 @@ import React from 'react';
 import './App.css';
 import LandingPage from './components/LandingPage'
 import MapContainer from './containers/MapContainer'
+import FavoritesContainer from './components/FavoritesContainer'
 import Home from './components/Home'
 import Login from './components/Login'
 import ReviewsContainer from './components/ReviewsContainer'
 import SignUp from './components/SignUp'
 import NavBar from './components/NavBar'
-import Cafes from './components/Cafes'
-// import Form from './components/Form'
+import Form from './components/Form'
+import CoffeeShopsContainer from './components/CoffeeShopsContainer'
 import {Route, Switch, withRouter} from 'react-router-dom'
 
 class App extends React.Component {
-  
-  
 
-  // componentDidMount(){
-  //   fetch('http://localhost:3000/reviews')
-  //   .then(res => res.json())
-  //   .then(reviews => this.setState({ reviews }))
+  renderReviews = () => <ReviewsContainer  reviews={this.state.reviews}/>
+  renderForm = () =>  <Form reviews={this.handleReview} />
+  handleReview = () => {
 
-  
-  // renderForm = () =>  <Form reviews={this.handleSubmit} />
-
-
+  }
   render() {
     return (
       
@@ -31,8 +26,9 @@ class App extends React.Component {
 <NavBar />    
   <Switch>
   <Route exact path='/' component={LandingPage}/>
-  <Route path="/cafes" component={Cafes}/>
+  <Route path="/CoffeeShopsContainer" component={CoffeeShopsContainer}/>
   <Route path='/ReviewsContainer' component={ReviewsContainer}/>
+  <Route path='/FavoritesContainer' component={FavoritesContainer}/>
   <Route path='/Home' component={Home}/>
   <Route path='/Login' component={Login}/>
   <Route path='/SignUp' component={SignUp}/>
