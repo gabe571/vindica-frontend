@@ -13,8 +13,7 @@ componentDidMount() {
   .then(cafes => this.setState({ cafes: cafes.businesses }))
 }
 render() {
-    console.log(this.state.cafes)
-    // console.log(this.state.name)
+    // console.log(this.state.cafes)
     return (
       <div className="cafe-title"> Cafes Near You!
       <ul>

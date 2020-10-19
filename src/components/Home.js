@@ -7,12 +7,29 @@ import Form from './Form'
 
 class Home extends React.Component {
 
+    state = {
+        reviews: [],  
+    }
+    
+    componentDidMount(){
+    fetch('http://localhost:3000/reviews')
+    .then(res => res.json())
+    .then(reviews => this.setState({ reviews }))
+    }
+
+    addReview = (coffeeShopName, reviewedCoffee, rating) => {
+       this.setState(prevState => ({
+        reviews: [...prevState.reviews, coffeeShopName, reviewedCoffee, rating]
+       }))
+    }
+    
 
     render() {
+        console.log(this.state.reviews)
         return (
                <div className="home">
-                    <Form />
-                    <ReviewsContainer />
+                    <Form addReview={this.addReview} reviews={this.state.reviews}/>
+                    <ReviewsContainer reviews={this.state.reviews}/>
                    <FavoritesContainer />
                    <MapContainer />
            </div>
