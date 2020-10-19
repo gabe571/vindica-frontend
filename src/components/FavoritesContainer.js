@@ -14,7 +14,7 @@ class FavoritesContainer extends React.Component{
     .then(favorites => this.setState({ favorites }))
     }
     render() {
-      // console.log(this.state.favorites)
+      console.log(this.state.favorites)
         return (
           <div> Favorites
           <ul>

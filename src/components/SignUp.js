@@ -10,22 +10,6 @@ class SignUp extends React.Component{
       },
    
     }
-
-    // componentDidMount(){
-    //     if(localStorage.token) {
-    //       fetch('http://localhost:3000/persist',{
-    //         headers:{
-    //           "Authorization": `Bearer ${localStorage.token}`
-    //         }
-    //       })
-    //       .then(res => res.json())
-    //       .then(json =>{
-    //         console.log(json)
-    //          this.handleAuthResponse(json)
-    //       })
-          
-    //     }
-    // }
      
        handleAuthResponse = (res) => {
          if(res.user){

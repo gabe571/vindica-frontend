@@ -14,11 +14,7 @@ import {Route, Switch, withRouter} from 'react-router-dom'
 
 class App extends React.Component {
 
-  renderReviews = () => <ReviewsContainer  reviews={this.state.reviews}/>
-  renderForm = () =>  <Form reviews={this.handleReview} />
-  handleReview = () => {
 
-  }
   render() {
     return (
       
