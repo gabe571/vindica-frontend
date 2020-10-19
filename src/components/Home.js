@@ -17,7 +17,7 @@ class Home extends React.Component {
     .then(reviews => this.setState({ reviews }))
     }
 
-    addReview = (coffeeShopName, reviewedCoffee, rating, user, coffee_shop_id) => {
+    addReview = (review) => {
         //fetch call?
         fetch('http://localhost:3000/reviews',{
             method: "POST",
@@ -25,16 +25,15 @@ class Home extends React.Component {
                 "Content-Type" : "application/json",
                 Accept: "application/json",
             },
-            body: JSON.stringify({ review: {coffee_shop_name: coffeeShopName, reviewed_coffee: reviewedCoffee, rating: rating, user_username: user, coffee_shop_id: coffee_shop_id},
-            }),
+            body: JSON.stringify({ review: review }
+            ),
         })
         .then(res => res.json())
         .then(( json => {
-            console.log(json)
+            this.setState(prevState => ({
+                reviews: [...prevState.reviews, json ]
+               }))
         }))
-       this.setState(prevState => ({
-        reviews: [...prevState.reviews, coffeeShopName, reviewedCoffee, rating, user]
-       }))
     }
     
    

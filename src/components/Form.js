@@ -39,12 +39,13 @@ handleUser = (event) => {
 handleForm = (e) => {
     e.preventDefault()
     console.log(e)
-    const coffee_shop_name = this.state.coffee_shop_name
-    const reviewed_coffee = this.state.reviewed_coffee
-    const rating = this.state.rating
-    const user_username = this.state.user_username
-    const coffee_shop_id = this.state.coffee_shop_id
-   this.props.addReview(coffee_shop_name, reviewed_coffee, rating, user_username, coffee_shop_id)
+    const review = {
+    coffee_shop_name: this.state.coffee_shop_name,
+    reviewed_coffee: this.state.reviewed_coffee,
+    rating: this.state.rating,
+    user_username: this.state.user_username,
+    coffee_shop_id: this.state.coffee_shop_id }
+   this.props.addReview(review)
 }
 render() {
     
