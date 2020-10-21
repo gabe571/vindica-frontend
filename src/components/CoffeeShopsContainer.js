@@ -14,8 +14,23 @@ componentDidMount() {
   .then(cafes => this.setState({ cafes: cafes.businesses }))
 }
 
+addToFav = (cafe) => {
+  console.log(cafe)
+  fetch(`http://localhost:3000/favorites`,{
+    method: "POST",
+    headers: { 
+      "Content-Type" : "application/json",
+      Accept: "application/json",
+      Authorization: `bareer ${localStorage.token}`
+    },
+      body: JSON.stringify( cafe )
+  })
+  .then(res => res.json())
+  .then(console.log)
+    }
+  
+
 render() {
-    // console.log(this.state.cafes)
     return (
       <div className="cafe-title"> 
        <NavBar />
@@ -23,7 +38,7 @@ render() {
 
       <ul>
         {
-           this.state.cafes.map(cafe => <CoffeeShop key={cafe.id} cafe={cafe}/>)
+           this.state.cafes.map(cafe => <CoffeeShop addToFav={this.addToFav}  key={cafe.id} cafe={cafe}/>)
         }  
       </ul>
      </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {Map, InfoWindow,InfoWindowEx, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Linkify from 'react-linkify';
 
 export class MapContainer extends React.Component {
@@ -17,8 +17,8 @@ export class MapContainer extends React.Component {
     image_url:"",
   }
 
-  addFavorite = (e) => {
-  console.log(e)
+  send = () => {
+  console.log("made it!")
   }
 
   componentDidMount() {
@@ -73,7 +73,7 @@ export class MapContainer extends React.Component {
       google={this.props.google}
           onClick={this.onMapClicked}>
             {this.makePins()}
-        <InfoWindow 
+        <InfoWindow
         image_url={this.state.image_url}
         display_address0={this.state.display_address}
         display_phone={this.state.display_phone}
@@ -90,10 +90,8 @@ export class MapContainer extends React.Component {
               <h5>Phone #:{this.state.display_phone}</h5>
               <Linkify>{this.state.url}</Linkify>
               <h5>{this.state.rating} Stars</h5>
-              <button className="submit-fav" onClick={(e) => {this.addFavorite(e)}}>Favorite!</button>
             </div>
         </InfoWindow>
-        
       </Map>
     )
    }
