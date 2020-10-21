@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+
 class NavBar extends Component {
-    state = {
-        users: [],
-        name: ""
-    }
     
-    
+
+    handleLogoutClick = (e) => {
+      e.preventDefault()
+      localStorage.clear();
+      // this.props.history.push("/");
+       console.log(localStorage)
+      };
+  
+  
+      
     render() {
+      console.log(this.state)
         return (
             <div className="navbar">
     <ul>
@@ -17,20 +24,22 @@ class NavBar extends Component {
          <li>
            <NavLink to='/home'>Home</NavLink>
          </li>
-         <li>
-           <NavLink to='/login'>Login</NavLink>
-         </li>
-         <li>
+         {/* <li>
            <NavLink to='/SignUp'>Sign Up here!</NavLink>
+         </li> */}
+         <li>
+           <NavLink to='/Cafes'>Cafes!</NavLink>
          </li>
          <li>
-           <NavLink to='/CoffeeShopsContainer'>Cafes!</NavLink>
+           <NavLink to='/Reviews'>Reviews!</NavLink>
          </li>
          <li>
-           <NavLink to='/ReviewsContainer'>Reviews!</NavLink>
-         </li>
-         <li>
-           {/* <NavLink to='/logout'>logout</NavLink> */}
+         {/* <li>
+           <NavLink to='/login'>Login</NavLink>
+         </li> */}
+         <a id="logout" href="logout" onClick={this.handleLogoutClick}>
+                logout
+              </a>
          </li>
        </ul>
        

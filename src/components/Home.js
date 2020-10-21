@@ -1,14 +1,16 @@
 import React from 'react'
 import MapContainer  from '../containers/MapContainer'
+import NavBar from './NavBar'
 import FavoritesContainer  from './FavoritesContainer'
-import ReviewsContainer  from './ReviewsContainer'
 import Form from './Form'
+
 
 
 class Home extends React.Component {
 
     state = {
-        reviews: [],  
+        reviews: [],
+        favorites: [],  
     }
     
     componentDidMount(){
@@ -16,6 +18,12 @@ class Home extends React.Component {
     .then(res => res.json())
     .then(reviews => this.setState({ reviews }))
     }
+
+    componentDidMount(){
+        fetch('http://localhost:3000/favorites')
+        .then(res => res.json())
+        .then(favorites => this.setState({ favorites }))
+        }
 
     addReview = (review) => {
         //fetch call?
@@ -36,15 +44,17 @@ class Home extends React.Component {
         }))
     }
     
+    addToFav = (cafe) => {
+        console.log(cafe)
+    }
    
     render() {
-        console.log(this.state.reviews)
+        // console.log(this.state.cafe)
         return (
                <div className="home">
-                   
-                    <Form addReview={this.addReview} review={this.handleSubmit}/>
-                    <ReviewsContainer reviews={this.state.reviews}/>
-                   <FavoritesContainer />
+                   <NavBar />
+                   <Form addReview={this.addReview} review={this.handleSubmit}/>
+                   <FavoritesContainer/>
                    <MapContainer />
            </div>
         )

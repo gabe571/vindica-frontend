@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .form {
  position: initial;
 }
@@ -77,7 +82,7 @@ width: 100px;
   width: 150px;
 }
 
-.infowindow {
+/* .infowindow {
   background-color: rgb(237, 28, 36);
     border: 1px solid rgba(72, 181, 233, 0.6);
     border-radius: 10px;
@@ -86,7 +91,7 @@ width: 100px;
     text-align: center;
     top: 15px !important;
     width: 150px !important; 
-}
+} */
 
 .review-card{
   border-style: groove;

@@ -1,5 +1,6 @@
 import React from 'react'
 import Favorite from './Favorite'
+import NavBar from './NavBar'
 
 class FavoritesContainer extends React.Component{
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import SignUp from './SignUp';
 
 class Login extends React.Component{
 
@@ -11,6 +12,7 @@ class Login extends React.Component{
       home:[]
     }
      
+
        handleAuthResponse = (res) => {
          if(res.user){
            localStorage.token = res.token
@@ -53,9 +55,10 @@ handleChange = (e) => {
   })
 }
 
+
 render(){
   return (
-    <div className="Login">
+    <div className="login">Login!
      <form onSubmit={(e) => this.handleLogin(e, this.state)}>
          <label>UserName</label>
          <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
@@ -65,6 +68,8 @@ render(){
          <br/>
          <input type="submit" value="Submit" />
       </form>
+      <div className="signup">SIGNUP HERE!</div>
+      <SignUp />
     </div>
   );
 }

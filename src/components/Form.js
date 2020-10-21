@@ -5,11 +5,10 @@ import React, { Component } from 'react'
 class Form extends React.Component {
  
     state = {
-        coffee_shop_name: this.props.coffee_shop_name,
-        reviewed_coffee:  this.props.reviewed_coffee,
-        rating: this.props.rating,
-        user_username: this.props.user_username,
-        coffee_shop_id: this.props.coffee_shop_id,
+        reviewed_coffee: '',
+        rating: '',
+        user_username: '',
+        coffee_shop_name: '',
     }
 
 handleCoffeeShopName = (event) => {
@@ -38,17 +37,17 @@ handleUser = (event) => {
 
 handleForm = (e) => {
     e.preventDefault()
-    console.log(e)
+    // console.log(e)
     const review = {
     coffee_shop_name: this.state.coffee_shop_name,
     reviewed_coffee: this.state.reviewed_coffee,
     rating: this.state.rating,
     user_username: this.state.user_username,
-    coffee_shop_id: this.state.coffee_shop_id }
-   this.props.addReview(review)
-}
-render() {
+    }
     
+   this.props.addReview(review)
+    }
+render() {
     return (
     <div>
             <form onSubmit={(e) => {this.handleForm(e)}}>

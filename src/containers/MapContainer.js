@@ -5,6 +5,7 @@ import Linkify from 'react-linkify';
 export class MapContainer extends React.Component {
 
   state = {
+    favorites: [],
     pins:[],
     showingInfoWindow: false,
     activeMarker: {},
@@ -14,8 +15,11 @@ export class MapContainer extends React.Component {
     url:"",
     rating:"",
     image_url:"",
-  };
+  }
 
+  addFavorite = (e) => {
+  console.log(e)
+  }
 
   componentDidMount() {
     fetch("http://localhost:3000/search")
@@ -57,7 +61,7 @@ export class MapContainer extends React.Component {
         width: "50%",
         height: "50%",
       };
-    // console.log(this.state.pins)
+    console.log(this.state.pins)
     return (
       <Map className="map-position"
       initialCenter={
@@ -86,6 +90,7 @@ export class MapContainer extends React.Component {
               <h5>Phone #:{this.state.display_phone}</h5>
               <Linkify>{this.state.url}</Linkify>
               <h5>{this.state.rating} Stars</h5>
+              <button className="submit-fav" onClick={(e) => {this.addFavorite(e)}}>Favorite!</button>
             </div>
         </InfoWindow>
         
