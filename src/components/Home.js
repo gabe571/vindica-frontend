@@ -19,13 +19,7 @@ class Home extends React.Component {
     .then(res => res.json())
     .then(reviews => this.setState({ reviews }))
     }
-
-    // componentDidMount(){
-    //     fetch('http://localhost:3000/favorites')
-    //     .then(res => res.json())
-    //     .then(favorites => this.setState({ favorites }))
-    //     }     
-          
+              
     addReview = (review) => {
         //fetch call?
         fetch('http://localhost:3000/reviews',{

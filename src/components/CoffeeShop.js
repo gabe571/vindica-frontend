@@ -3,12 +3,13 @@ import React from 'react'
 class Cafes extends React.Component {
 
   state = {
+    cafes: [],
       coffee_shop_name: this.props.cafe.name,
       coffee_shop_image_url: this.props.cafe.image_url,
       coffee_shop_phone: this.props.cafe.phone,
       coffee_shop_id: this.props.cafe.id,
   }
-  
+
 
     handleAdd = (e) => {
 
@@ -23,8 +24,10 @@ class Cafes extends React.Component {
          this.props.addToFav(cafe)
         }
 render() {
-  console.log(this.state)
-    return (
+  
+
+  return (
+      <div>
     <div className="cafes">
         <img src={this.props.cafe.image_url} width="400" height="300"alt="cafe"></img>
         <div>{this.props.cafe.name} </div>
@@ -32,10 +35,10 @@ render() {
         <div>{this.props.cafe.display_phone} </div>
             <div>
                  <button className="submit-fav" onClick={(e) => {this.handleAdd(e)}}>Add to Favorites</button>
-            </div>
+          </div>
     </div>
+ </div>
         )
     }
-}
+  }
 export default Cafes;
-

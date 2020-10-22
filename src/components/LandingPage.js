@@ -1,5 +1,5 @@
 import React from 'react'
-import vindica from './vindica.png'
+import coffeelog from './coffeelog.png'
 
 import Login from './Login'
 
@@ -10,7 +10,7 @@ class LandingPage extends React.Component {
         return (
                <div className="landingpage"> 
                     <a href='/Login' Component={Login}>
-                    <img src={vindica} alt="Logo" />
+                    <img className="lpi" src={coffeelog} alt="Logo" />
                 </a>
            </div>
         )

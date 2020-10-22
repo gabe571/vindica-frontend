@@ -14,7 +14,6 @@ class NavBar extends Component {
   
       
     render() {
-      console.log(this.state)
         return (
             <div className="navbar">
     <ul>
@@ -24,9 +23,6 @@ class NavBar extends Component {
          <li>
            <NavLink to='/home'>Home</NavLink>
          </li>
-         {/* <li>
-           <NavLink to='/SignUp'>Sign Up here!</NavLink>
-         </li> */}
          <li>
            <NavLink to='/Cafes'>Cafes!</NavLink>
          </li>
@@ -34,9 +30,6 @@ class NavBar extends Component {
            <NavLink to='/Reviews'>Reviews!</NavLink>
          </li>
          <li>
-         {/* <li>
-           <NavLink to='/login'>Login</NavLink>
-         </li> */}
          <a id="logout" href="logout" onClick={this.handleLogoutClick}>
                 logout
               </a>
