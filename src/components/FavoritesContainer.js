@@ -17,10 +17,12 @@ class FavoritesContainer extends React.Component{
     render() {
       console.log(this.state.favorites)
         return (
-          <div> Favorites
+          <div> 
+            <h3 className="fav-text">Favorites</h3>
           <ul>
             {
-              this.state.favorites.map(favorite => <Favorite key={favorite.id} favorite={favorite}  />)
+              this.state.favorites.map(favorite => <Favorite key={favorite.id} favorite={favorite} 
+                 />)
             }  
           </ul>
          </div>

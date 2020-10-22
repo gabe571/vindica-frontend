@@ -5,10 +5,14 @@ class Favorite extends React.Component {
  
    
     render() {
-        // console.log(this.props)
+        console.log(this.props)
         return (
         <div className="fav-card">
-            <div>{this.props.favorite.name}</div>
+            <ul className="fav-ul">
+             <img src={this.props.favorite.coffee_shop.image_url} width="200" height="200"alt="cafe"></img>
+            <div>{this.props.favorite.coffee_shop.name}</div>
+        <div>{this.props.favorite.coffee_shop.phone}</div>
+        </ul>
         </div>
             )
         }

@@ -33,6 +33,7 @@ class Home extends React.Component {
             headers: {
                 "Content-Type" : "application/json",
                 Accept: "application/json",
+                Authorization: `bearer ${localStorage.token}`
             },
             body: JSON.stringify({ review: review }
             ),
@@ -51,9 +52,10 @@ class Home extends React.Component {
         return (
                <div className="home">
                    <NavBar />
-                   <Form addReview={this.addReview} review={this.handleSubmit}/>
-                   <FavoritesContainer />
                    <MapContainer />
+                   <FavoritesContainer />
+                   <Form addReview={this.addReview} review={this.handleSubmit}/>
+              
            </div>
         )
 }

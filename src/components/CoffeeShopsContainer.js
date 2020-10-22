@@ -21,7 +21,7 @@ addToFav = (cafe) => {
     headers: { 
       "Content-Type" : "application/json",
       Accept: "application/json",
-      Authorization: `bareer ${localStorage.token}`
+      Authorization: `bearer ${localStorage.token}`
     },
       body: JSON.stringify( cafe )
   })

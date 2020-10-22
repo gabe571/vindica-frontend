@@ -16,8 +16,9 @@ fetch('http://localhost:3000/reviews')
 
   render() {
     return (
-      <div>
+      <div> 
         <NavBar />
+        <h5>WHAT OUR MEMBERS ARE SAYING!</h5>
          <ul className="review-cards">
       {
         this.state.reviews.map(review => <Review key={review.id} review={review}/>)

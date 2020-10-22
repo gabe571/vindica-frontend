@@ -49,7 +49,7 @@ handleForm = (e) => {
     }
 render() {
     return (
-    <div>
+    <div className="form-container">
             <form onSubmit={(e) => {this.handleForm(e)}}>
                 <div>
                     <div>

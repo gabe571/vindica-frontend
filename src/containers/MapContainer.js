@@ -58,8 +58,8 @@ export class MapContainer extends React.Component {
 
     render() {
       const mapStyles = {
-        width: "50%",
-        height: "50%",
+        width: "60%",
+        height: "75%",
       };
     console.log(this.state.pins)
     return (
