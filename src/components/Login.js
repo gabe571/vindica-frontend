@@ -58,17 +58,21 @@ handleChange = (e) => {
 
 render(){
   return (
-    <div className="login">Login!
+    <div className="login">Welcome Back!
      <form onSubmit={(e) => this.handleLogin(e, this.state)}>
+       <div>
          <label>UserName</label>
+         <br></br>
          <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-        <br/>
+         </div>
+         <div>
          <label>Password</label>
+         <br></br>
          <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
-         <br/>
-         <input type="submit" value="Submit" />
+         </div>
+         <input type="submit" value="Submit" className="sl-btn" />
       </form>
-      <div className="signup">SIGNUP HERE!</div>
+      <div></div>
       <SignUp />
     </div>
   );

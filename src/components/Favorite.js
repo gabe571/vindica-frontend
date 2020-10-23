@@ -9,7 +9,7 @@ class Favorite extends React.Component {
         return (
         <div className="fav-card">
             <ul className="fav-ul">
-             <img src={this.props.favorite.coffee_shop.image_url} width="200" height="200"alt="cafe"></img>
+             <img src={this.props.favorite.coffee_shop.image_url} className="fav-img"alt="cafe"></img>
             <div>{this.props.favorite.coffee_shop.name}</div>
         <div>{this.props.favorite.coffee_shop.phone}</div>
         </ul>

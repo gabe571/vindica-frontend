@@ -20,6 +20,7 @@
   background-color: black;
 }
 
+
 .cards__item {
 color: teal;
 background-color:white;
@@ -27,7 +28,7 @@ text-align: left;
 }
 
 .cafes {
-  color: teal;
+  color:black;
   background: white
 }
 li {
@@ -54,16 +55,10 @@ background-image: url('/Home.png');
 }
 
 .map-position {
-margin-left: 300px;
-margin-top: 10px
-/* width: 100px;
-  position: fixed;
-  display: block; */
-  /* z-index: 10; */
-}
-
-.landingpage {
- background-color: white;
+left: 250px;
+top: 100px;
+position: fixed;
+display: block; 
 }
 
 .mapimage {
@@ -85,26 +80,64 @@ margin-top: 10px
 }
 
 .review-card {
+  padding: 5px;
   border-style: solid;
-  border-radius: 10px;
+  width: 200px;
+  margin: 5px;
+  display: grid;
   color: black;
   background-color: white;
 }
 
 .cafes {
+  top: 20px;
+  display: grid;
+  text-align: center;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);  
+ }
+ 
+ .cafeimg {
+   position: relative;
+   left: 200px;
+   margin: 5px;
+   width: 350px; 
+   height: 250px
+ }
+ 
+ .submit-fav {
+  border: none;
+  background-color: teal;
   color: black;
-  background-color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
+
 .fav-card {
-  text-align: left;
-  color: black;
-  background-color:white;
-  margin-left: 50px;
+  position: relative;
+  width: fit-content;
+  margin: 5px;
+  text-align: center;
+  box-shadow:  0px 4px 8px 10px rgba(0,0,0,0.2);  
+}
+
+.fav-img {
+  top: 5px;
+  left: 5px;
+  height: 200px;
+  width: 200px;
 }
 
 .form-container {
-  margin-left: 300px;
-  /* margin-bottom: 300px; */
+  position: relative; 
+  bottom:900px;
+  left: 300px;
+  text-align: left;
+  border-style: solid;
+  width: fit-content;
+  padding: 5px
 }
 
 .fav-ul {
@@ -112,10 +145,48 @@ margin-top: 10px
 }
 
 .fav-text {
-  margin-left: 50px;
+right: 100px;
 }
 
 .lpi {
-height: 700px;
+position: absolute;
+bottom: 1px;
+top: .2px;
+height: 500px;
 width: 800px;
 }
+
+.cafe-search {
+  position: relative;
+  left: 200px
+}
+
+.cafe-search-bar {
+  position: relative;
+  left: 200px
+}
+
+.sub-review {
+  border: none;
+  background-color: teal;
+  color: black;
+  padding: 8px 10px;
+  margin: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.login {
+  border: solid;
+  width: 300px;
+  position: relative;
+  left: 200px;
+  text-align: center;
+}
+
+.sl-btn {
+  margin: 5px;
+}
+

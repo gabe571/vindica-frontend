@@ -53,10 +53,10 @@ render() {
     return (
       <div className="cafe-title"> 
        <NavBar />
-      Cafes Near You!
-      <label htmlFor="search">Search by Cafe Name</label>
+      <label className="cafe-search"htmlFor="search">Search by Cafe Name</label>
+      <br></br>
       
-      <input type="text" value={this.inputValue} onChange={(e) => {this.cafeFilterOnChange(e)}}/>
+      <input type="text" className="cafe-search-bar" placeholder="Type Cafe Name Here..." value={this.inputValue} onChange={(e) => {this.cafeFilterOnChange(e)}}/>
 
       <ul>
         {

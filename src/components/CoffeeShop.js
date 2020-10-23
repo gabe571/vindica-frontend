@@ -27,14 +27,15 @@ render() {
   
 
   return (
-      <div>
+      <div class="row">
     <div className="cafes">
-        <img src={this.props.cafe.image_url} width="400" height="300"alt="cafe"></img>
+        <img src={this.props.cafe.image_url} className="cafeimg"alt="cafe"></img>
         <div>{this.props.cafe.name} </div>
         <div> {this.props.cafe.location.display_address} </div>
         <div>{this.props.cafe.display_phone} </div>
             <div>
-                 <button className="submit-fav" onClick={(e) => {this.handleAdd(e)}}>Add to Favorites</button>
+                 <button className="submit-fav" onClick={(e) => {this.handleAdd(e)}}> Favorite ♥ </button>
+              
           </div>
     </div>
  </div>

@@ -16,7 +16,7 @@ fetch('http://localhost:3000/reviews')
 
   render() {
     return (
-      <div> 
+      <div className="review-grid"> 
         <NavBar />
         <h5>WHAT OUR MEMBERS ARE SAYING!</h5>
          <ul className="review-cards">

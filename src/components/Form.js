@@ -53,21 +53,25 @@ render() {
             <form onSubmit={(e) => {this.handleForm(e)}}>
                 <div>
                     <div>
-                    <label>CoffeeShop</label>
-                    <input type="text" value={this.state.coffee_shop_name} onChange={this.handleCoffeeShopName} />
+                    <label>Cafe</label>
+                    <br></br>
+                    <input type="text"  placeholder="Cafe Name..." value={this.state.coffee_shop_name} onChange={this.handleCoffeeShopName} />
                     </div>
                     <label>Review</label>
-                    <textarea value={this.state.reviewed_coffee} onChange={this.handleReviewedCoffee} />
+                    <br></br>
+                    <textarea type="text" placeholder="Your Experience..." value={this.state.reviewed_coffee} onChange={this.handleReviewedCoffee} />
                     <div>
-                    <label>Rating</label>
-                    <input value={this.state.rating} onChange={this.handleRating} />
+                    <label>Stars</label>
+                    <br></br>
+                    <input type="number"  max="5" min="0" value={this.state.rating} onChange={this.handleRating} />
                     </div>
                     <div>
-                    <label>User</label>
-                    <input value={this.state.user_username} onChange={this.handleUser} />
+                    <label>Member Name</label>
+                    <br></br>
+                    <input  type="text" placeholder="Member Name"value={this.state.user_username} onChange={this.handleUser} />
                     </div>
                 </div>
-                <button type="submit">Create Review!</button>
+                <button type="submit" className="sub-review">Create Review!</button>
             </form> 
         
     </div>
