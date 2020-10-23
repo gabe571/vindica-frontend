@@ -3,6 +3,7 @@ import MapContainer  from '../containers/MapContainer'
 import NavBar from './NavBar'
 import FavoritesContainer  from './FavoritesContainer'
 import CoffeeShopsContainer from './CoffeeShopsContainer'
+import coffeecup from './coffeecup.png'
 import Form from './Form'
 
 
@@ -45,6 +46,7 @@ class Home extends React.Component {
         // console.log(this.state.cafe)
         return (
                <div className="home">
+                    <img className="cup" src={coffeecup} alt="cup" />
                    <NavBar />
                    <MapContainer />
                    <FavoritesContainer />

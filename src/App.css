@@ -13,10 +13,11 @@
 
 
 .navbar {
+  top: .2px;
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: black;
 }
 
@@ -36,6 +37,7 @@ li {
 }
 
 li a {
+  position: relative;
   display: block;
   color: white;
   text-align: center;
@@ -69,6 +71,7 @@ display: block;
 }
 
 .infowindow {
+  word-wrap: break-word;
   background-color: rgb(237, 28, 36);
     border: 1px solid rgba(72, 181, 233, 0.6);
     border-radius: 5px;
@@ -80,15 +83,25 @@ display: block;
 }
 
 .review-card {
-  padding: 5px;
+  word-wrap: break-word;
+  padding: 15px;
   border-style: solid;
-  width: 200px;
+  width: 150px;
+  height: 200px;
   margin: 5px;
-  display: grid;
   color: black;
   background-color: white;
 }
 
+.review-container {
+  display: inline-grid;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  position: relative;
+  left: 30px;
+}
 .cafes {
   top: 20px;
   display: grid;
@@ -106,7 +119,7 @@ display: block;
  
  .submit-fav {
   border: none;
-  background-color: teal;
+  background-color: lime;
   color: black;
   padding: 15px 32px;
   text-align: center;
@@ -131,12 +144,14 @@ display: block;
 }
 
 .form-container {
+  background-color: grey;
   position: relative; 
   bottom:900px;
   left: 300px;
   text-align: left;
   border-style: solid;
   width: fit-content;
+  text-emphasis: bold;
   padding: 5px
 }
 
@@ -146,6 +161,8 @@ display: block;
 
 .fav-text {
 right: 100px;
+font-weight: bolder;
+color: black
 }
 
 .lpi {
@@ -156,6 +173,18 @@ height: 500px;
 width: 800px;
 }
 
+.cup {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  opacity: .2;
+}
+
+.cup-two {
+  position: absolute;
+  top: .2px;
+  opacity: .2;
+}
 .cafe-search {
   position: relative;
   left: 200px
@@ -168,7 +197,7 @@ width: 800px;
 
 .sub-review {
   border: none;
-  background-color: teal;
+  background-color: lime;
   color: black;
   padding: 8px 10px;
   margin: 1px;
@@ -179,6 +208,7 @@ width: 800px;
 }
 
 .login {
+  top: 50px;
   border: solid;
   width: 300px;
   position: relative;
@@ -190,3 +220,6 @@ width: 800px;
   margin: 5px;
 }
 
+.vindica-icon {
+  height: 1px;
+}

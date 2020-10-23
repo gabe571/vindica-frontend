@@ -1,5 +1,6 @@
 import React from 'react';
 import SignUp from './SignUp';
+import coffeecup from './coffeecup.png'
 
 class Login extends React.Component{
 
@@ -58,6 +59,7 @@ handleChange = (e) => {
 
 render(){
   return (
+    <div><img className="cup-two" src={coffeecup} alt="cup" />
     <div className="login">Welcome Back!
      <form onSubmit={(e) => this.handleLogin(e, this.state)}>
        <div>
@@ -75,6 +77,7 @@ render(){
       <div></div>
       <SignUp />
     </div>
+  </div>
   );
 }
 }

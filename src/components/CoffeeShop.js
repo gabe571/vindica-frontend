@@ -1,4 +1,5 @@
 import React from 'react'
+import coffeecup from './coffeecup.png'
 
 class Cafes extends React.Component {
 
@@ -27,6 +28,7 @@ render() {
   
 
   return (
+    <div>
       <div class="row">
     <div className="cafes">
         <img src={this.props.cafe.image_url} className="cafeimg"alt="cafe"></img>
@@ -35,7 +37,7 @@ render() {
         <div>{this.props.cafe.display_phone} </div>
             <div>
                  <button className="submit-fav" onClick={(e) => {this.handleAdd(e)}}> Favorite ♥ </button>
-              
+                 </div> 
           </div>
     </div>
  </div>

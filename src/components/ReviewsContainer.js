@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Review from './Review'
 import NavBar from './NavBar'
+import coffeecup from './coffeecup.png'
 
 export default class ReviewsContainer extends Component {
 
@@ -16,7 +17,8 @@ fetch('http://localhost:3000/reviews')
 
   render() {
     return (
-      <div className="review-grid"> 
+      <div className="review-grid">
+        <img className="cup" src={coffeecup} alt="cup" /> 
         <NavBar />
         <h5>WHAT OUR MEMBERS ARE SAYING!</h5>
          <ul className="review-cards">

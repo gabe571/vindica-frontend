@@ -1,6 +1,7 @@
 import React from 'react';
 import CoffeeShop from './CoffeeShop'
 import NavBar from './NavBar'
+import coffeecup from './coffeecup.png'
 
 class CafesContainer extends React.Component {
 
@@ -52,6 +53,7 @@ render() {
   console.log(this.state.cafes)
     return (
       <div className="cafe-title"> 
+       <img className="cup" src={coffeecup} alt="cup" />
        <NavBar />
       <label className="cafe-search"htmlFor="search">Search by Cafe Name</label>
       <br></br>

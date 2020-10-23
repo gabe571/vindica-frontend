@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Map, InfoWindow,InfoWindowEx, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Linkify from 'react-linkify';
+import logo from './vindica.logo.png'
 
 export class MapContainer extends React.Component {
 
@@ -88,8 +89,8 @@ export class MapContainer extends React.Component {
               <h5>{this.state.selectedPlace}</h5>
               <h5>{this.state.display_address}</h5>
               <h5>Phone #:{this.state.display_phone}</h5>
-              <Linkify>{this.state.url}</Linkify>
               <h5>{this.state.rating} Stars</h5>
+              <a href={this.state.url}>Yelp Review</a>
             </div>
         </InfoWindow>
       </Map>
