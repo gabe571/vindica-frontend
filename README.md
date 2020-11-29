@@ -52,7 +52,7 @@ Add coffeeshops to your favorites by clicking on cafes and searching by name.  C
 # Developer
 
 #### Gabriel Castro
-Gihub
+Github
 https://github.com/gabe571
 Linkedin
 https://www.linkedin.com/in/gabriel-castro-5063891b0/
