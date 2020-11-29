@@ -3,7 +3,7 @@
 
 ## About
 
-Vindica is the a React application with a Ruby on Rails backend created to help members find coffee shops with in the greater Seattle Area.  Allowing members to share their experience and add coffee shops to their favorite bars to visit again at a later date , all while protecting their information with JWT authorization.
+Vindica is a React application with a Ruby on Rails backend created to help members find coffee shops with in the greater Seattle Area.  Allowing members to share their experience and add coffee shops to their favorite bars to visit again at a later date , all while protecting their information with JWT authorization.
 
 ## Installation
 
@@ -35,3 +35,23 @@ npm start               #open app in browser
 
 ### Sign Up/Log In
 
+Start by logging in with your memebership name and password.  If this is your first time please create a new memebership name and password to login to get started.
+
+## Reviews!
+
+This application takes advantage of the Google API to locate coffeeshps in the area, aswell as YELP API to see reviews that have already been given.  
+
+* You can use the google map to see coffeeshops nearest you.
+* View the Yelp reviews already given, or see what other members are saying!
+* Create your own review of your experience and add to the reviews for all memebers to see.
+
+## Favorites
+
+Add coffeeshops to your favorites by clicking on cafes and searching by name.  Click "Favorite", return to homepage and you should now see it listed.
+
+# Developer
+
+#### Gabriel Castro
+[GitHub] (http://github.com)
+Linkedin
+Medium
