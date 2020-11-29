@@ -33,5 +33,5 @@ npm start               #open app in browser
 
 ## Getting Started
 
-Sign Up/Log In
+### Sign Up/Log In
 
