@@ -17,10 +17,6 @@ Run Vindica by simply cloning down both frontend and backend into a single direc
 
 cd into vindica--backend, run the following:
 
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
+```
+testing
 ```
