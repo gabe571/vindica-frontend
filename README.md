@@ -52,6 +52,6 @@ Add coffeeshops to your favorites by clicking on cafes and searching by name.  C
 # Developer
 
 #### Gabriel Castro
-[GitHub] (http://github.com)
-Linkedin
-Medium
+https://github.com/gabe571
+https://www.linkedin.com/in/gabriel-castro-5063891b0/
+https://gabrielcastro1028.medium.com/
