@@ -24,3 +24,14 @@ rails db:migrate          #migrates tables
 rails db:seed             #seed database
 rails server              #spin up server
 ```
+cd into vindica-frontend, run the following:
+
+```
+npm install             #React packages and dependencies
+npm start               #open app in browser
+```
+
+## Getting Started
+
+Sign Up/Log In
+
