@@ -3,12 +3,24 @@
 
 ## About
 
-Vindica is the a React application with a Ruby on Rails backend created for members to find coffee shops with in the greater Seattle Area.  Allowing members to share their experience and add coffee shops to their favorite bars to visit again at a later date.
+Vindica is the a React application with a Ruby on Rails backend created to help members find coffee shops with in the greater Seattle Area.  Allowing members to share their experience and add coffee shops to their favorite bars to visit again at a later date , all while protecting their information with JWT authorization.
 
-Installation
+## Installation
 
 Reposities can be found here: 
 Frontend
 https://github.com/gabe571/vindica-frontend
 Backend
 https://github.com/gabe571/vindica--backend
+
+Run Vindica by simply cloning down both frontend and backend into a single directory.
+
+cd into vindica--backend, run the following:
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
