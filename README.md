@@ -18,5 +18,9 @@ Run Vindica by simply cloning down both frontend and backend into a single direc
 cd into vindica--backend, run the following:
 
 ```
-testing
+bundle install            #installs gems needed
+rails db:create           #creates PostgreSQL database
+rails db:migrate          #migrates tables
+rails db:seed             #seed database
+rails server              #spin up server
 ```
