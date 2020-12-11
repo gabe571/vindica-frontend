@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from './NavBar'
 
 class Review extends React.Component {
 
@@ -12,8 +11,7 @@ render() {
             <div className="review">Cafe: {this.props.review.coffee_shop_name}</div>
                 <div className="review">Review: {this.props.review.reviewed_coffee}</div>
                     <div className="review">User: {this.props.review.user_username}</div>
-                         <div className="review">Stars: {this.props.review.rating}
-                     </div>
+                         <div className="review">Stars: {this.props.review.rating}</div>
                 </div>
             </div>
         )
