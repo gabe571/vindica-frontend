@@ -1,7 +1,6 @@
 import React from 'react';
 import CoffeeShop from './CoffeeShop'
 import NavBar from './NavBar'
-import coffeecup from './coffeecup.png'
 
 class CafesContainer extends React.Component {
 
@@ -40,7 +39,21 @@ addToFav = (cafe) => {
       inputSort: e.target.value,
     });
   };
-
+  removeFav = (cafedelete) => {
+    console.log(cafedelete)
+   //  let favorite = favorite
+   //   fetch(`http://localhost:3000/favorites/${favorite.id}`,{
+   //     method: 'DELETE',
+   //     headers: {
+   //       'Content-Type': 'application/json',
+   //       Accept: 'application/json'
+   //     }
+   //   })
+   //   .then((res) => res.json())
+   //   .then((json) => {
+   //     console.log(json)
+   //   })
+   }
 
   
 render() {  
@@ -53,7 +66,7 @@ render() {
   console.log(this.state.cafes)
     return (
       <div className="cafe-title"> 
-       <img className="cup" src={coffeecup} alt="cup" />
+       {/* <img className="cup" src={coffeecup} alt="cup" /> */}
        <NavBar />
       <label className="cafe-search"htmlFor="search">Search by Cafe Name</label>
       <br></br>

@@ -1,5 +1,4 @@
 import React from 'react'
-import coffeecup from './coffeecup.png'
 
 class Cafes extends React.Component {
 
@@ -11,9 +10,7 @@ class Cafes extends React.Component {
       coffee_shop_id: this.props.cafe.id,
   }
 
-
     handleAdd = (e) => {
-
         console.log(e)
         const cafe = {
             coffee_shop_name: this.state.coffee_shop_name,
@@ -21,16 +18,14 @@ class Cafes extends React.Component {
             coffee_shop_phone: this.state.coffee_shop_phone,
             coffee_shop_id: this.state.coffee_shop_id,
           }
-            
          this.props.addToFav(cafe)
         }
 render() {
-  
 
   return (
     <div>
       <div class="row">
-    <div className="cafes">
+        <div className="cafes">
         <img src={this.props.cafe.image_url} className="cafeimg"alt="cafe"></img>
         <div>{this.props.cafe.name} </div>
         <div> {this.props.cafe.location.display_address} </div>

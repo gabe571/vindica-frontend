@@ -18,10 +18,7 @@ class NavBar extends Component {
             <div className="navbar">
     <ul>
          <li>
-           <NavLink to='/' exact>VINDICA</NavLink>
-         </li>
-         <li>
-           <NavLink to='/home'>Home</NavLink>
+           <NavLink to='/home' exact>VINDICA</NavLink>
          </li>
          <li>
            <NavLink to='/Cafes'>Cafes!</NavLink>
@@ -30,9 +27,9 @@ class NavBar extends Component {
            <NavLink to='/Reviews'>Reviews!</NavLink>
          </li>
          <li>
-         <a id="logout" href="logout" onClick={this.handleLogoutClick}>
-                logout
-              </a>
+         <li>
+           <NavLink to='/Login'>logout</NavLink>
+         </li>
          </li>
        </ul>
        

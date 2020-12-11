@@ -3,10 +3,9 @@ import MapContainer  from '../containers/MapContainer'
 import NavBar from './NavBar'
 import FavoritesContainer  from './FavoritesContainer'
 import CoffeeShopsContainer from './CoffeeShopsContainer'
+import { useHistory } from 'react-router-dom';
 import coffeecup from './coffeecup.png'
 import Form from './Form'
-
-
 
 class Home extends React.Component {
 
@@ -14,7 +13,7 @@ class Home extends React.Component {
         reviews: [],
         favorites: [],
     }
-    
+
     componentDidMount(){
     fetch('http://localhost:3000/reviews')
     .then(res => res.json())
@@ -22,7 +21,6 @@ class Home extends React.Component {
     }
               
     addReview = (review) => {
-        //fetch call?
         fetch('http://localhost:3000/reviews',{
             method: "POST",
             headers: {
@@ -40,18 +38,15 @@ class Home extends React.Component {
                }))
         }))
     }
-    
   
     render() {
-        // console.log(this.state.cafe)
         return (
                <div className="home">
                     <img className="cup" src={coffeecup} alt="cup" />
                    <NavBar />
                    <MapContainer />
+                   <Form addReview={this.addReview} review={this.handleSubmit} />
                    <FavoritesContainer />
-                   <Form addReview={this.addReview} review={this.handleSubmit}/>
-              
            </div>
         )
 }

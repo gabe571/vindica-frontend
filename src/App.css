@@ -13,10 +13,9 @@
 
 
 .navbar {
-  top: .2px;
   width: 100%;
   list-style-type: none;
-  margin: 0;
+  bottom: 10px;
   padding: 0;
   background-color: black;
 }
@@ -43,10 +42,25 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  background-color: black
 }
 
 li a:hover {
-  background-color: #111;
+  text-decoration: none;
+  color: red;
+}
+
+a:active {
+  text-decoration: none;
+  color: red;
+}
+
+a:link, a:visited {
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 .home {
 background-image: url('/Home.png');
@@ -57,7 +71,7 @@ background-image: url('/Home.png');
 }
 
 .map-position {
-left: 250px;
+left: 350px;
 top: 100px;
 position: fixed;
 display: block; 
@@ -111,6 +125,7 @@ display: block;
  
  .cafeimg {
    position: relative;
+   border: solid;
    left: 200px;
    margin: 5px;
    width: 350px; 
@@ -118,8 +133,10 @@ display: block;
  }
  
  .submit-fav {
-  border: none;
-  background-color: lime;
+  outline: orchid;
+  opacity: 1;
+  border: solid;
+  background-color: red;
   color: black;
   padding: 15px 32px;
   text-align: center;
@@ -131,6 +148,7 @@ display: block;
 .fav-card {
   position: relative;
   width: fit-content;
+  bottom: 300px;
   margin: 5px;
   text-align: center;
   box-shadow:  0px 4px 8px 10px rgba(0,0,0,0.2);  
@@ -145,14 +163,15 @@ display: block;
 
 .form-container {
   background-color: grey;
-  position: relative; 
-  bottom:900px;
-  left: 300px;
+  position: relative;
+  left: 350px; 
+  top: 800px;
   text-align: left;
   border-style: solid;
-  width: fit-content;
+  width: 500px;
+  height: 350px;
   text-emphasis: bold;
-  padding: 5px
+  padding: 50px;
 }
 
 .fav-ul {
@@ -160,30 +179,34 @@ display: block;
 }
 
 .fav-text {
-right: 100px;
+position: absolute;
+top: 70px;
+left:50px;
+font-size: 30px;
+text-align: left;
 font-weight: bolder;
-color: black
+color: orange;
 }
 
 .lpi {
 position: absolute;
 bottom: 1px;
 top: .2px;
-height: 500px;
-width: 800px;
+height: 100%;
+width: 100%;
 }
 
 .cup {
   position: fixed;
   width: fit-content;
   height: fit-content;
-  opacity: .2;
+  opacity: .4;
 }
 
 .cup-two {
   position: absolute;
   top: .2px;
-  opacity: .2;
+  opacity: .5;
 }
 .cafe-search {
   position: relative;
@@ -196,8 +219,8 @@ width: 800px;
 }
 
 .sub-review {
-  border: none;
-  background-color: lime;
+  border: solid;
+  background-color:red;
   color: black;
   padding: 8px 10px;
   margin: 1px;

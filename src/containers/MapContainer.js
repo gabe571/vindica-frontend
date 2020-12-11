@@ -42,7 +42,8 @@ export class MapContainer extends React.Component {
   
   makePins = () => {
     return this.state.pins.map(pin => {
-      return (<Marker onClick={this.onMarkerClick}
+      return (<Marker icon={{
+        url: logo, scaledSize:  new this.props.google.maps.Size(25,25) }} onClick={this.onMarkerClick}
          key={pin.id} pin={pin} 
         position={{ lat: pin.coordinates.latitude, lng: pin.coordinates.longitude }} name={pin.name} display_phone={pin.display_phone} display_address={pin.location.display_address} url={pin.url} rating={pin.rating} image_url={pin.image_url}
       />)
@@ -59,8 +60,8 @@ export class MapContainer extends React.Component {
 
     render() {
       const mapStyles = {
-        width: "60%",
-        height: "75%",
+        width: "65%",
+        height: "75",
       };
     console.log(this.state.pins)
     return (
@@ -90,7 +91,7 @@ export class MapContainer extends React.Component {
               <h5>{this.state.display_address}</h5>
               <h5>Phone #:{this.state.display_phone}</h5>
               <h5>{this.state.rating} Stars</h5>
-              <a href={this.state.url}>Yelp Review</a>
+              <a href={this.state.url} target="_blank">Yelp Review</a>
             </div>
         </InfoWindow>
       </Map>
