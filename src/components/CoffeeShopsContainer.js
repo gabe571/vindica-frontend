@@ -19,7 +19,6 @@ componentDidMount() {
 }
 
 addToFav = (cafe) => {
-  console.log(cafe)
   fetch(`http://localhost:3000/favorites`,{
     method: "POST",
     headers: { 
@@ -63,7 +62,6 @@ render() {
     return cafe.name.toLowerCase().includes(this.state.inputValue.toLowerCase())
   })
 
-  console.log(this.state.cafes)
     return (
       <div className="cafe-title"> 
        <NavBar />

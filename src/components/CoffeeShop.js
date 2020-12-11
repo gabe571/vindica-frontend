@@ -24,7 +24,7 @@ render() {
 
   return (
     <div>
-      <div class="row">
+      <div className="row">
         <div className="cafes">
         <img src={this.props.cafe.image_url} className="cafeimg"alt="cafe"></img>
         <div>{this.props.cafe.name} </div>
