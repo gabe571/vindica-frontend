@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# VINDICA
 
-## Available Scripts
 
-In the project directory, you can run:
+## About
 
-### `yarn start`
+Vindica is a React application with a Ruby on Rails backend created to help members find coffee shops with in the greater Seattle Area.  Allowing members to share their experience and add coffee shops to their favorite bars to visit again at a later date , all while protecting their information with JWT authorization.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Reposities can be found here: 
+Frontend
+https://github.com/gabe571/vindica-frontend
+Backend
+https://github.com/gabe571/vindica--backend
 
-### `yarn test`
+Run Vindica by simply cloning down both frontend and backend into a single directory.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+cd into vindica--backend, run the following:
 
-### `yarn build`
+```
+bundle install            #installs gems needed
+rails db:create           #creates PostgreSQL database
+rails db:migrate          #migrates tables
+rails db:seed             #seed database
+rails server              #spin up server
+```
+cd into vindica-frontend, run the following:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install             #React packages and dependencies
+npm start               #open app in browser
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Sign Up/Log In
 
-### `yarn eject`
+Start by logging in with your memebership name and password.  If this is your first time please create a new memebership name and password to login to get started.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Reviews!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This application takes advantage of the Google API to locate coffeeshps in the area, aswell as YELP API to see reviews that have already been given.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* You can use the google map to see coffeeshops nearest you.
+* View the Yelp reviews already given, or see what other members are saying!
+* Create your own review of your experience and add to the reviews for all memebers to see.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Favorites
 
-## Learn More
+Add coffeeshops to your favorites by clicking on cafes and searching by name.  Click "Favorite", return to homepage and you should now see it listed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Developer
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Gabriel Castro
+Github
+https://github.com/gabe571
+Linkedin
+https://www.linkedin.com/in/gabriel-castro-5063891b0/
+Medium
+https://gabrielcastro1028.medium.com/
