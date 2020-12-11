@@ -1,6 +1,5 @@
 import React from 'react'
 import NavBar from './NavBar'
-import coffeecup from './coffeecup.png'
 
 class Review extends React.Component {
 
@@ -14,9 +13,9 @@ render() {
                 <div className="review">Review: {this.props.review.reviewed_coffee}</div>
                     <div className="review">User: {this.props.review.user_username}</div>
                          <div className="review">Stars: {this.props.review.rating}
-                         </div>
-                    </div>
-                 </div>
+                     </div>
+                </div>
+            </div>
         )
     }
 }

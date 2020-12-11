@@ -8,7 +8,6 @@ class Favorite extends React.Component {
     cafes:[],
     }
    
-
    handleDelete = (e) =>{
     const cafedelete = {
         coffee_shop_name: this.state.coffee_shop_name,
