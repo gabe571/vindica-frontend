@@ -1,7 +1,7 @@
 import React from 'react'
 import MapContainer  from '../containers/MapContainer'
 import NavBar from './NavBar'
-import CoffeeShopsContainer  from './CoffeeShopsContainer'
+import FavoritesContainer  from './FavoritesContainer'
 import Form from './Form'
 
 class Home extends React.Component {
@@ -40,9 +40,9 @@ class Home extends React.Component {
         return (
                <div className="home">
                    <NavBar />
-                   <CoffeeShopsContainer />
                    <MapContainer />
                    <Form addReview={this.addReview} review={this.handleSubmit} />
+                   <FavoritesContainer />
            </div>
         )
 }

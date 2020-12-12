@@ -1,5 +1,6 @@
 import React from 'react';
 import CoffeeShop from './CoffeeShop'
+import NavBar from './NavBar'
 
 class CafesContainer extends React.Component {
 
@@ -63,6 +64,7 @@ render() {
 
     return (
       <div className="cafe-title"> 
+       <NavBar />
       <label className="cafe-search"htmlFor="search">Search by Cafe Name</label>
       <br></br>
       

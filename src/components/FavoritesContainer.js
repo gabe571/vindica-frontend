@@ -1,6 +1,5 @@
 import React from 'react'
 import Favorite from './Favorite'
-import NavBar from './NavBar';
 
 class FavoritesContainer extends React.Component{
     state = {
@@ -10,7 +9,6 @@ class FavoritesContainer extends React.Component{
      render() {
         return (
           <div> 
-            <NavBar />
             <h5 className="fav-text">Favorites</h5>
           <ul>
             {
