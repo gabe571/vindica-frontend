@@ -73,8 +73,8 @@ background-image: url('/Home.png');
 .map-position {
 left: 400px;
 top: 100px;
-display: block; 
 position: fixed;
+display: block; 
 }
 
 .mapimage {
@@ -102,6 +102,7 @@ position: fixed;
   border-style: solid;
   width: 150px;
   height: 200px;
+  margin: 5px;
   color: black;
   background-color: white;
 }
@@ -159,6 +160,7 @@ position: fixed;
   background-color: grey;
   position: relative;
   left: 400px; 
+  top: 800px;
   text-align: left;
   border-style: solid;
   width: 500px;
