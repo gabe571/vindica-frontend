@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+
+
 class Form extends React.Component {
  
     state = {
@@ -35,6 +37,7 @@ handleUser = (event) => {
 
 handleForm = (e) => {
     e.preventDefault()
+    // console.log(e)
     const review = {
     coffee_shop_name: this.state.coffee_shop_name,
     reviewed_coffee: this.state.reviewed_coffee,

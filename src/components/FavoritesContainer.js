@@ -7,6 +7,7 @@ class FavoritesContainer extends React.Component{
       cafes:[],
     }
      render() {
+      console.log(this.state.favorites)
         return (
           <div> 
             <h5 className="fav-text">Favorites</h5>
