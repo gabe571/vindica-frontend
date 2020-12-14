@@ -15,7 +15,7 @@ class FavoritesContainer extends React.Component{
      
     addToFav = (cafe) => {
       console.log(cafe)
-      fetch(`http://localhost:3000/favorites/${user.id}`,{
+      fetch(`http://localhost:3000/favorites/`,{
         method: "POST",
         headers: { 
           "Content-Type" : "application/json",
