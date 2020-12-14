@@ -66,7 +66,6 @@ render() {
   console.log(this.state.cafes)
     return (
       <div className="cafe-title"> 
-       <NavBar />
       <label className="cafe-search"htmlFor="search">Search by Cafe Name</label>
       <br></br>
       

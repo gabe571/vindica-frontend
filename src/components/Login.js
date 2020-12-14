@@ -1,5 +1,6 @@
 import React from 'react';
 import SignUp from './SignUp';
+import { withRouter } from "react-router"
 
 class Login extends React.Component{
 
@@ -79,4 +80,4 @@ render(){
 }
 }
 
-export default Login;
+export default withRouter(Login)

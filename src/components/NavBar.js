@@ -21,15 +21,13 @@ class NavBar extends Component {
            <NavLink to='/home' exact>VINDICA</NavLink>
          </li>
          <li>
-           <NavLink to='/Cafes'>Cafes!</NavLink>
-         </li>
-         <li>
            <NavLink to='/Reviews'>Reviews!</NavLink>
          </li>
          <li>
+           <NavLink to='/Favorites'>Favorites</NavLink>
+        </li>
          <li>
            <NavLink to='/Login'>logout</NavLink>
-         </li>
          </li>
        </ul>
        
