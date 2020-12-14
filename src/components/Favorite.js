@@ -7,6 +7,7 @@ class Favorite extends React.Component {
     favorites:[],
     cafes:[],
     }
+    
    
    handleDelete = (e) =>{
     const cafedelete = {
@@ -26,7 +27,7 @@ class Favorite extends React.Component {
              <img src={this.props.favorite.coffee_shop.image_url} className="fav-img"alt="cafe"></img>
             <div>{this.props.favorite.coffee_shop.name}</div>
         <div>{this.props.favorite.coffee_shop.phone}</div>
-        {/* <button onClick={(e) => {this.handleDelete(e)}}>X</button> */}
+        <button onClick={(e) => {this.handleDelete(e)}}>X</button>
         </ul>
         </div>
             )

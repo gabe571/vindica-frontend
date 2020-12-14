@@ -28,7 +28,6 @@ class App extends React.Component {
   <Route path="/Reviews" component={ReviewsContainer}/>
   <Route path='/Favorites' component={FavoritesContainer}/>
   <Route path='/Home' component={Home}/>
-  <Route path='/Home' component={Review}/>
   <Route path='/Login' component={Login}/>
   <Route path='/SignUp' component={SignUp}/>
   <Route path='/form' render={this.renderForm}/>
