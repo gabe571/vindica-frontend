@@ -31,7 +31,7 @@ render() {
         <div> {this.props.cafe.location.display_address} </div>
         <div>{this.props.cafe.display_phone} </div>
             <div>
-                 <button className="submit-fav" onClick={(e) => {this.handleAdd(e)}}> Favorite ♥ </button>
+                 {/* <button className="submit-fav" onClick={(e) => {this.handleAdd(e)}}> Favorite ♥ </button> */}
                  </div> 
           </div>
     </div>
