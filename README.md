@@ -47,7 +47,7 @@ This application takes advantage of the Google API to locate coffeeshps in the a
 
 ## Favorites
 
-Add coffeeshops to your favorites by clicking on cafes and searching by name.  Click "Favorite", return to homepage and you should now see it listed.
+This feature is under construction.
 
 # Developer
 
