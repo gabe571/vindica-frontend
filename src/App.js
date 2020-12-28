@@ -29,6 +29,7 @@ class App extends React.Component {
   <Route path='/Favorites' component={FavoritesContainer}/>
   <Route path='/Home' component={Home}/>
   <Route path='/Login' component={Login}/>
+  <Route path='/' component={this.handleLogoutClick}/>
   <Route path='/SignUp' component={SignUp}/>
   <Route path='/form' render={this.renderForm}/>
   <Route path="/Map" component={MapContainer}/>

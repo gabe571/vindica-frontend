@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 class NavBar extends Component {
     
@@ -7,12 +7,10 @@ class NavBar extends Component {
     handleLogoutClick = (e) => {
       e.preventDefault()
       localStorage.clear();
-      // this.props.history.push("/");
+      this.props.history.push("/");
        console.log(localStorage)
       };
   
-  
-      
     render() {
         return (
             <div className="navbar">
@@ -27,7 +25,9 @@ class NavBar extends Component {
            <NavLink to='/Favorites'>Favorites</NavLink>
         </li>
          <li>
-           <NavLink to='/Login'>logout</NavLink>
+         <a id="logout" href="#" onClick={this.handleLogoutClick}>
+                LOGOUT
+              </a>
          </li>
        </ul>
        
@@ -36,4 +36,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar
+export default withRouter(NavBar)
