@@ -7,8 +7,7 @@ class Favorite extends React.Component {
     favorites:[],
     cafes:[],
     }
-    
-   
+       
    handleDelete = (e) =>{
     const cafedelete = {
         coffee_shop_name: this.state.coffee_shop_name,
@@ -20,14 +19,13 @@ class Favorite extends React.Component {
     }
    
    render() {
-       console.log(this.state.cafes.name)
         return (
-        <div className="fav-card">
+        <div className="grid-container">
             <ul className="fav-ul">
              <img src={this.props.favorite.coffee_shop.image_url} className="fav-img"alt="cafe"></img>
             <div>{this.props.favorite.coffee_shop.name}</div>
         <div>{this.props.favorite.coffee_shop.phone}</div>
-        <button onClick={(e) => {this.handleDelete(e)}}>X</button>
+        {/* <button onClick={(e) => {this.handleDelete(e)}}>X</button> */}
         </ul>
         </div>
             )

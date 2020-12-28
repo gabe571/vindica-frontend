@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Review from './Review'
 import NavBar from './NavBar'
+import Form from './Form'
+
 
 export default class ReviewsContainer extends Component {
 
@@ -24,6 +26,7 @@ fetch('http://localhost:3000/reviews')
         this.state.reviews.map(review => <Review key={review.id} review={review}/>)
       }  
     </ul>
+    <Form />
       </div>
     )
   }

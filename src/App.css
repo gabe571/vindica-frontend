@@ -142,27 +142,26 @@ display: block;
   font-size: 16px;
 }
 
-.fav-card {
-  position: relative;
+.grid-container {
   width: fit-content;
-  bottom: 300px;
-  margin: 5px;
   text-align: center;
   box-shadow:  0px 4px 8px 10px rgba(0,0,0,0.2);  
 }
 
+.tf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
 .fav-img {
   top: 5px;
   left: 5px;
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 300px;
 }
 
 .form-container {
   background-color: grey;
   position: relative;
-  left: 400px; 
-  bottom: 14000px;
   text-align: left;
   border-style: solid;
   width: 500px;

@@ -10,6 +10,11 @@ class CafesContainer extends React.Component {
     isCafeViewOn: false,
     inputValue: '',
     inputSort: '',
+    user: {
+      id:0,
+      username:'',
+      token:'',
+    }
 }
 
 componentDidMount() {
@@ -39,22 +44,6 @@ addToFav = (cafe) => {
       inputSort: e.target.value,
     });
   };
-  removeFav = (cafedelete) => {
-    console.log(cafedelete)
-   //  let favorite = favorite
-   //   fetch(`http://localhost:3000/favorites/${favorite.id}`,{
-   //     method: 'DELETE',
-   //     headers: {
-   //       'Content-Type': 'application/json',
-   //       Accept: 'application/json'
-   //     }
-   //   })
-   //   .then((res) => res.json())
-   //   .then((json) => {
-   //     console.log(json)
-   //   })
-   }
-
   
 render() {  
   
@@ -64,6 +53,7 @@ render() {
   })
 
   console.log(this.state.cafes)
+  console.log(this.state.favorites)
     return (
       <div className="cafe-title"> 
       <label className="cafe-search"htmlFor="search">Search by Cafe Name</label>

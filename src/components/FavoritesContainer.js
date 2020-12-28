@@ -12,35 +12,27 @@ class FavoritesContainer extends React.Component{
       favorites: [],
       cafes:[],
     }
-     
-    addToFav = (cafe) => {
-      console.log(cafe)
-      fetch(`http://localhost:3000/favorites?`,{
-        method: "POST",
-        headers: { 
-          "Content-Type" : "application/json",
-          Accept: "application/json",
-          Authorization: `bearer ${localStorage.token}`
-        },
-          body: JSON.stringify( cafe )
-      })
-      .then(res => res.json())
-      .then(console.log)
-      }
-      cafeFilterOnChange = (e) => {
-        console.log (e.target.value)
+    
+    componentDidMount() {
+      fetch(`http://localhost:3000/favorites`)
+      .then(resp => resp.json())
+      .then(favorites => this.setState({ favorites }))
+    }
+    
+    cafeFilterOnChange = (e) => {
+      console.log (e.target.value)
         this.setState({
           inputValue: e.target.value,
           inputSort: e.target.value,
         });
-      };     
+    };  
+
      render() {
-      console.log(this.state.favorites)
         return (
           <div> 
           <NavBar /> 
             <h5 className="fav-text">Favorites</h5>
-          <ul>
+          <ul className='tf-grid'>
             {
               this.state.favorites.map(favorite => <Favorite key={favorite.id} favorite={favorite} removeFav={this.removeFav}
                  />)
@@ -53,3 +45,4 @@ class FavoritesContainer extends React.Component{
     ;
 
 export default FavoritesContainer;
+
