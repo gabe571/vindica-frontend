@@ -11,6 +11,9 @@
   text-align: left;
 }
 
+.review-title {
+  margin-left: 500px;
+}
 
 .navbar {
   width: 100%;
@@ -153,7 +156,6 @@ display: block;
   grid-template-columns: 1fr 1fr 1fr 1fr; 
 }
 .fav-img {
-  top: 5px;
   left: 5px;
   height: 400px;
   width: 300px;
@@ -176,11 +178,8 @@ display: block;
 }
 
 .fav-text {
-position: absolute;
-top: 70px;
-left:50px;
-font-size: 30px;
-text-align: left;
+font-size: 50px;
+margin-left: 500px;
 font-weight: bolder;
 color: orange;
 }
