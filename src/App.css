@@ -164,6 +164,7 @@ display: block;
   position: relative;
   text-align: left;
   border-style: solid;
+  margin-left: 1px;
   width: 500px;
   height: 350px;
   text-emphasis: bold;
