@@ -47,7 +47,7 @@ This application takes advantage of the Google API to locate coffeeshps in the a
 
 ## Favorites
 
-This feature is under construction.
+Add Coffee Shops to your Favorites list!
 
 # Developer
 
