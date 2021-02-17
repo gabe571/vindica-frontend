@@ -3,9 +3,9 @@ import { NavLink, withRouter } from 'react-router-dom';
 
 class NavBar extends Component {
     
-
     handleLogoutClick = (e) => {
       e.preventDefault()
+      console.log(localStorage)
       localStorage.clear();
       this.props.history.push("/");
        console.log(localStorage)
@@ -25,12 +25,9 @@ class NavBar extends Component {
            <NavLink to='/Favorites'>Favorites</NavLink>
         </li>
          <li>
-         <a id="logout" href="#" onClick={this.handleLogoutClick}>
-                LOGOUT
-              </a>
+         <a id="logout" href="/" onClick={this.handleLogoutClick}>Logout</a>
          </li>
        </ul>
-       
             </div>
         )
     }

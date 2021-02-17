@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@reach/combobox": "^0.11.2",
     "@react-google-maps/api": "^1.10.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -13,6 +15,8 @@
     "flippy": "^1.2.0",
     "google-maps-react": "^2.0.6",
     "mapbox-gl": "^1.12.0",
+    "material": "^0.4.3",
+    "mdbreact": "^5.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flippy": "^0.1.5",

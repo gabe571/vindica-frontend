@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { NavLink, withRouter } from 'react-router-dom';
 class SignUp extends React.Component{
 
     state={
@@ -21,6 +21,31 @@ class SignUp extends React.Component{
            alert(res.error)
          }
        }
+
+
+       handleLogin = (e, userInfo) =>{
+        e.preventDefault()
+        console.log(e)
+     
+        fetch('http://localhost:3000/login',{
+         method:"POST",
+         headers:{
+           'Content-Type':'application/json'
+         },
+         body:JSON.stringify(userInfo)
+       })
+       .then(res => res.json())
+       .then(json => {
+         console.log(json)
+         if(!json.error){
+           this.handleAuthResponse(json)
+         }else {
+           alert(json.error)
+         }
+       })
+       .catch(err => console.log(err))
+      }
+     
 
 
       handleSignUp = (e,userInfo) => {
@@ -70,4 +95,4 @@ render(){
 }
 }
 
-export default SignUp;
+export default withRouter(SignUp);
