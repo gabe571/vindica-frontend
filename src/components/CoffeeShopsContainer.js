@@ -45,7 +45,19 @@ addToFav = (cafe) => {
       inputSort: e.target.value,
     });
   };
-  
+
+  removeFav = (cafe) => {
+    console.log(cafe)
+    fetch(`http://localhost:3000/favorites/`, {
+      method: 'DELETE',
+      headers: { 
+        "Content-Type" : "application/json",
+        Accept: "application/json",
+        Authorization: `bearer ${localStorage.token}`
+      }
+    })
+    .then(res => res.json())
+  }
 render() {  
   
   const filteredCafes =
@@ -65,7 +77,7 @@ render() {
       <ul>
         {
            filteredCafes.map(cafe => <CoffeeShop cafes={this.filteredCafes} handleCafeView={this.handleCafeView} cafeFilterOnChange={this.cafeFilterOnChange} inputValue={this.inputValue}
-           addToFav={this.addToFav} key={cafe.id} cafe={cafe} />)
+           addToFav={this.addToFav} key={cafe.id} cafe={cafe} removeFav={this.removeFav}/>)
         }  
       </ul>
      </div>
