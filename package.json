@@ -21,6 +21,7 @@
     "react-dom": "^16.13.1",
     "react-flippy": "^0.1.5",
     "react-google-maps": "^9.4.5",
+    "react-icon": "^1.0.0",
     "react-linkify": "^1.0.0-alpha",
     "react-map-gl": "^5.2.8",
     "react-map-gl-geocoder": "^2.1.3",

@@ -133,16 +133,14 @@ display: block;
  }
  
  .submit-fav {
-  outline: orchid;
+  outline: none;
   opacity: 1;
-  border: solid;
-  background-color: red;
-  color: black;
-  padding: 15px 32px;
+  color:red ;
+  padding: 1px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 40px;
 }
 
 .grid-container {

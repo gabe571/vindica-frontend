@@ -35,8 +35,9 @@ addToFav = (cafe) => {
       body: JSON.stringify( cafe )
   })
   .then(res => res.json())
-  .then(console.log)
-  }
+  .then(json => alert(json.message)
+  )}
+  
   cafeFilterOnChange = (e) => {
     console.log (e.target.value)
     this.setState({
