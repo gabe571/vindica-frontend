@@ -57,7 +57,9 @@ addToFav = (cafe) => {
       }
     })
     .then(res => res.json())
-  }
+    .then(json => alert(json.message)
+    )}
+    
 render() {  
   
   const filteredCafes =
