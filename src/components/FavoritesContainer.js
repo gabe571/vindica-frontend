@@ -34,7 +34,7 @@ class FavoritesContainer extends React.Component{
             <h5 className="fav-text">Favorites</h5>
           <ul className='tf-grid'>
             {
-              this.state.favorites.map(favorite => <Favorite key={favorite.id} favorite={favorite} removeFav={this.removeFav}
+              this.state.favorites.map(favorite => <Favorite key={favorite.id} favorite={favorite} 
                  />)
             }  
           </ul>

@@ -48,7 +48,7 @@ addToFav = (cafe) => {
 
   removeFav = (cafe) => {
     console.log(cafe)
-    fetch(`http://localhost:3000/favorites/`, {
+    fetch(`http://localhost:3000/favorites/${cafe.coffee_shop_id}`, {
       method: 'DELETE',
       headers: { 
         "Content-Type" : "application/json",
