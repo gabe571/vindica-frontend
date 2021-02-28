@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter, useHistory } from 'react-router-dom';
 
 class NavBar extends Component {
     
     handleLogoutClick = (e) => {
       e.preventDefault()
-      console.log(localStorage)
       localStorage.clear();
       this.props.history.push("/");
        console.log(localStorage)
